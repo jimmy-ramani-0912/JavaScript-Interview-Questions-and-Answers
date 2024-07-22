@@ -139,6 +139,12 @@ NaN == NaN or NaN === NaN // false
 | Hoisted but not initialized                   | Variable declaration will be hoisted, initialized as undefined | Hoisted but not initialized                   |
 
 ```js
+Example with const:
+
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+const b = 10;
+console.log(b); // Outputs: 10
+
 Example with var:
 
 console.log(a); // Outputs: undefined (hoisted and initialized)
@@ -149,7 +155,7 @@ Example with let:
 
 console.log(b); // ReferenceError: Cannot access 'b' before initialization
 let b = 10;
-console.log(b); // Outputs: 10\
+console.log(b); // Outputs: 10
 ```
 
 <br />
