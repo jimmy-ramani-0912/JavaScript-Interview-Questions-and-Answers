@@ -84,7 +84,7 @@ var obj1 = {
 };
 ```
 
-2. Object
+2. Array
 
 ```javascript
 var array1 = [5, "Hello", true, 4.1];
