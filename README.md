@@ -365,7 +365,7 @@ function myFunction() {
 | 12. | What is a first class function? |
 | --- | ------------------------------- |
 
-A first-class function is a function that can be treated like any other variabl. This means that functions can be assigned to any other variable or passed as an argument or can be returned by another function or stored in data structures.
+A first-class function is a function that can be treated like any other variable. This means that functions can be assigned to any other variable or passed as an argument or can be returned by another function or stored in data structures.
 
 ```js
 // Assigning a function to a variable
@@ -403,18 +403,43 @@ console.log(functionsArray[1]("Dave")); // Outputs: Hi, Dave!
 
 A first-order function is a function that does not take any other functions as arguments and does not return a function as its result. First-order functions perform simple tasks such as mathematical operations, data manipulation, or string processing.
 
+```js
+// This function adds two numbers
+function add(a, b) {
+  return a + b;
+}
+
+// Using the function
+let sum = add(5, 3);  // sum will be 8
+console.log(sum);     // Output: 8
+```
+
 <br/>
 
 | 14. | Higher Order Functions? |
 | --- | :---------------------- |
 
-Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
+Higher-order functions in JavaScript are functions that either take one or more functions as arguments or return a function as their result.
 
 ex.
 With array : map(), reduce(), filter(), and sort()
 With object : Object.entries()
 With functions : compose()
 setTimeout(), setInterval() etc...
+
+```js
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+
+const twice = multiplier(2);
+const thrice = multiplier(3);
+
+console.log(twice(5));  // Output: 10
+console.log(thrice(5)); // Output: 15
+```
 
 <br />
 
